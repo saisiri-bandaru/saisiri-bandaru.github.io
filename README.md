@@ -8,18 +8,21 @@ MS Business Analytics (University of New Haven) and MBA Finance. Currently suppo
 
 ## On this site
 
-- Selected work: PNC throughput, upGrad forecast packs, capital NPV/IRR, working-capital MIS
-- 7-page recruiter packet (PDF)
+- Selected work and recruiter packet
 - Experience, toolkit, and education
+- Links to open Excel work samples
 
-## Work samples
+## Open these three workbooks first
 
-| Project | What it is |
+| Project | Business question |
 | --- | --- |
-| [FP&A variance dashboard](https://github.com/saisiri-bandaru/fpna-variance-dashboard) | Actual vs Budget vs Forecast |
-| [Cost accounting workbook](https://github.com/saisiri-bandaru/cost-accounting-workbook) | Material, labor, overhead, COGS bridge |
-| [13-week cash forecast](https://github.com/saisiri-bandaru/thirteen-week-cash-forecast) | Weekly receipts, disbursements, ending cash |
-| [Three-statement model](https://github.com/saisiri-bandaru/three-statement-model) | Linked P&L, balance sheet, cash flow |
+| [FP&A variance dashboard](https://github.com/saisiri-bandaru/fpna-variance-dashboard) | Why did margin miss — rate or volume? |
+| [Cost accounting workbook](https://github.com/saisiri-bandaru/cost-accounting-workbook) | Which plant variance sits with purchasing vs the floor? |
+| [13-week cash forecast](https://github.com/saisiri-bandaru/thirteen-week-cash-forecast) | Can payroll clear if a receipt slips one week? |
+
+Also: [three-statement model](https://github.com/saisiri-bandaru/three-statement-model) · [DCF](https://github.com/saisiri-bandaru/dcf-valuation-model)
+
+Sample files use a fictional company. No employer data.
 
 ## Contact
 
