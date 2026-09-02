@@ -5,480 +5,371 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sai Siri Bandaru | Financial Analyst, FP&A & Operations Finance</title>
   <meta name="description" content="Financial Analyst at PNC. MS Business Analytics and MBA Finance. Forecasting, variance analysis, executive dashboards, and capital decision support." />
-  <meta name="theme-color" content="#0b1f3a" />
+  <meta name="theme-color" content="#050816" />
   <link rel="canonical" href="https://saisiri-bandaru.github.io/" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta property="og:title" content="Sai Siri Bandaru | Financial Analyst" />
   <meta property="og:description" content="FP&A and operations finance portfolio — variance packs, forecasts, and capital cases." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://saisiri-bandaru.github.io/" />
   <meta property="og:image" content="https://saisiri-bandaru.github.io/og.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: "#0b1f3a",
-            "navy-2": "#132a4a",
-            ink: "#1a2332",
-            gold: "#c4a574",
-            "gold-2": "#e8d5b0",
-            cream: "#f6f1e8",
-            paper: "#fbf8f3",
-            muted: "#5c6673",
-            line: "#eadfcd",
-            body: "#3b4450",
-            soft: "#7a8490",
-            "hero-copy": "#d7deea",
-          },
-          fontFamily: {
-            display: ['"Cormorant Garamond"', "Georgia", "serif"],
-            sans: ['"Source Sans 3"', "ui-sans-serif", "system-ui", "sans-serif"],
-          },
-        },
-      },
-    };
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Syne:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --bg: #050816;
+      --bg2: #0b1120;
+      --ink: #e8eefc;
+      --muted: #94a3b8;
+      --line: rgba(148,163,184,.18);
+      --accent: #ef4444;
+      --accent2: #22d3ee;
+      --violet: #7c3aed;
+      --green: #10b981;
+      --card: rgba(15,23,42,.72);
+    }
+    * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif; background: #fbf8f3; color: #1a2332; }
-    button { cursor: pointer; }
-    .tab-on { background: #0b1f3a; color: #f6f1e8; border-color: #0b1f3a; }
-    .tab-off { background: #fbf8f3; color: #0b1f3a; border-color: #eadfcd; }
-    .hero-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; background: #0b1f3a; }
-    .hero-svg { width: 100%; height: 100%; display: block; }
-    .hero-wash { position: absolute; inset: 0; z-index: 1; pointer-events: none;
-      background: linear-gradient(90deg, rgba(11,31,58,.92) 0%, rgba(11,31,58,.78) 52%, rgba(11,31,58,.55) 100%); }
-    .hero-grid { stroke: #c4a574; stroke-opacity: .07; stroke-width: 1; }
-    .hero-wave { fill: none; stroke: #c4a574; stroke-width: 1.7; stroke-linecap: round; opacity: .5; }
-    .hero-wave-soft { fill: none; stroke: #e8d5b0; stroke-width: 1.1; opacity: .2; }
-    .hero-mote { fill: #c4a574; }
-    .drift { animation: drift 14s ease-in-out infinite; }
-    .drift-slow { animation: drift 22s ease-in-out infinite reverse; }
-    .float-a { animation: floaty 9s ease-in-out infinite; }
-    .float-b { animation: floaty 13s ease-in-out infinite .8s; }
-    .float-c { animation: floaty 17s ease-in-out infinite 1.6s; }
-    @keyframes drift {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(-48px); }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      overflow-x: hidden;
     }
-    @keyframes floaty {
-      0%, 100% { transform: translate(0, 0); opacity: .18; }
-      50% { transform: translate(18px, -14px); opacity: .42; }
+    a { color: inherit; text-decoration: none; }
+    .noise {
+      pointer-events: none; position: fixed; inset: 0; z-index: 0; opacity: .035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
-    @media (prefers-reduced-motion: reduce) {
-      .drift, .drift-slow, .float-a, .float-b, .float-c { animation: none; }
+    #glow {
+      pointer-events: none; position: fixed; width: 42vw; height: 42vw; border-radius: 50%;
+      background: radial-gradient(circle, rgba(239,68,68,.28), rgba(124,58,237,.12) 40%, transparent 70%);
+      filter: blur(40px); z-index: 0; transform: translate(-50%, -50%); left: 50%; top: 30%;
+      transition: left .12s linear, top .12s linear;
+    }
+    #loader {
+      position: fixed; inset: 0; z-index: 100; background: #050816; display: grid; place-items: center;
+      transition: opacity .6s ease, visibility .6s ease;
+    }
+    #loader.done { opacity: 0; visibility: hidden; }
+    #loader .n { font-family: Syne, sans-serif; font-size: clamp(4rem, 14vw, 8rem); font-weight: 800; letter-spacing: -.04em; }
+    #loader .bar { width: min(220px, 50vw); height: 2px; background: #1e293b; margin-top: 1rem; overflow: hidden; }
+    #loader .bar > i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+    .wrap { position: relative; z-index: 1; }
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 1.5rem; backdrop-filter: blur(14px); background: rgba(5,8,22,.45); border-bottom: 1px solid transparent;
+    }
+    .nav.scrolled { border-bottom-color: var(--line); }
+    .brand { font-family: Syne, sans-serif; font-weight: 700; letter-spacing: .08em; font-size: .85rem; }
+    .nav-links { display: flex; gap: 1.25rem; font-size: .82rem; color: var(--muted); }
+    .nav-links a:hover { color: var(--ink); }
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem; border-radius: 999px; padding: .85rem 1.25rem;
+      font-size: .88rem; font-weight: 600; border: 1px solid var(--line); transition: .2s ease;
+    }
+    .btn-primary { background: linear-gradient(135deg, #ef4444, #b91c1c); border-color: transparent; color: white; }
+    .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.08); }
+    .btn-ghost:hover { border-color: rgba(34,211,238,.5); color: var(--accent2); }
+    .hero {
+      min-height: 100vh; display: grid; place-items: center; padding: 7rem 1.5rem 4rem; text-align: center; position: relative;
+    }
+    .eyebrow {
+      font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-family: Syne, sans-serif; font-weight: 800; font-size: clamp(3.4rem, 14vw, 8.5rem); line-height: .9;
+      letter-spacing: -.04em; margin: 0; mixed-blend-mode: difference;
+      background: linear-gradient(180deg, #fff 10%, rgba(255,255,255,.35) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-shadow: 0 0 80px rgba(239,68,68,.15);
+    }
+    .hero h1 span { display: block; }
+    .hero .sub {
+      max-width: 38rem; margin: 1.5rem auto 0; color: var(--muted); font-size: 1.05rem; line-height: 1.6;
+    }
+    .hero .role {
+      margin-top: .85rem; font-family: "Instrument Serif", serif; font-style: italic; font-size: 1.35rem; color: #fca5a5;
+    }
+    .hero-cta { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; margin-top: 2.25rem; }
+    .stats {
+      display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1rem; max-width: 980px; margin: 3.5rem auto 0;
+    }
+    .stat {
+      border: 1px solid var(--line); border-radius: 1rem; padding: 1.1rem 1rem; background: var(--card); text-align: left;
+    }
+    .stat b { display: block; font-family: Syne, sans-serif; font-size: 1.35rem; margin-bottom: .35rem; }
+    .stat span { color: var(--muted); font-size: .82rem; line-height: 1.4; }
+    section { padding: 5.5rem 1.5rem; max-width: 1120px; margin: 0 auto; }
+    .sec-label {
+      font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; color: var(--accent2); margin-bottom: .75rem;
+    }
+    .sec-title {
+      font-family: Syne, sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -.03em; margin: 0 0 1rem; line-height: 1.05;
+    }
+    .sec-copy { color: var(--muted); max-width: 40rem; line-height: 1.7; font-size: 1.02rem; }
+    .philosophy {
+      min-height: 70vh; display: grid; place-items: center; text-align: center; position: relative;
+      border-block: 1px solid var(--line); background:
+        radial-gradient(ellipse at center, rgba(239,68,68,.18), transparent 55%),
+        linear-gradient(180deg, rgba(5,8,22,0), rgba(5,8,22,.9));
+    }
+    .philosophy h2 {
+      font-family: Syne, sans-serif; font-size: clamp(2.4rem, 8vw, 5rem); letter-spacing: -.03em; margin: 0 0 1.25rem;
+    }
+    .philosophy p { max-width: 38rem; margin: 0 auto; color: #cbd5e1; line-height: 1.75; font-size: 1.08rem; }
+    .grid-work {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; margin-top: 2rem;
+    }
+    .card {
+      position: relative; overflow: hidden; border-radius: 1.25rem; border: 1px solid var(--line);
+      background: linear-gradient(160deg, rgba(30,41,59,.85), rgba(15,23,42,.95));
+      padding: 1.5rem; min-height: 220px; transition: transform .25s ease, border-color .25s ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(34,211,238,.45); }
+    .card .tag {
+      display: inline-flex; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: #fda4af;
+      border: 1px solid rgba(248,113,113,.35); border-radius: 999px; padding: .25rem .6rem; margin-bottom: 1rem;
+    }
+    .card h3 { font-family: Syne, sans-serif; font-size: 1.35rem; margin: 0 0 .6rem; }
+    .card p { color: var(--muted); margin: 0; line-height: 1.55; font-size: .95rem; }
+    .card .meta { position: absolute; bottom: 1.25rem; left: 1.5rem; right: 1.5rem; display: flex; justify-content: space-between; color: #64748b; font-size: .78rem; }
+    .timeline { margin-top: 2rem; display: grid; gap: 1rem; }
+    .job {
+      display: grid; grid-template-columns: 10rem 1fr; gap: 1.25rem; padding: 1.25rem 1.35rem;
+      border: 1px solid var(--line); border-radius: 1.1rem; background: var(--card);
+    }
+    .job .when { color: var(--accent2); font-size: .78rem; letter-spacing: .04em; }
+    .job h3 { margin: 0 0 .2rem; font-family: Syne, sans-serif; font-size: 1.15rem; }
+    .job .co { color: #fda4af; font-size: .9rem; margin-bottom: .55rem; }
+    .job p { margin: 0; color: var(--muted); line-height: 1.55; font-size: .95rem; }
+    .edu {
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; margin-top: 2rem;
+    }
+    .edu article {
+      border: 1px solid var(--line); border-radius: 1.1rem; padding: 1.25rem; background: var(--card);
+    }
+    .edu h3 { margin: .35rem 0; font-family: Syne, sans-serif; font-size: 1.05rem; }
+    .edu .school { color: var(--muted); font-size: .85rem; }
+    .contact {
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: 1.5rem; margin-top: 2rem;
+    }
+    .contact .panel {
+      border: 1px solid var(--line); border-radius: 1.25rem; padding: 1.5rem; background: var(--card);
+    }
+    .contact dt { color: var(--muted); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; margin-top: 1rem; }
+    .contact dd { margin: .35rem 0 0; font-size: 1.05rem; }
+    .contact a:hover { color: var(--accent2); }
+    footer {
+      border-top: 1px solid var(--line); padding: 1.5rem; text-align: center; color: #64748b; font-size: .82rem;
+    }
+    @media (max-width: 860px) {
+      .stats { grid-template-columns: 1fr 1fr; }
+      .grid-work, .edu, .contact { grid-template-columns: 1fr; }
+      .job { grid-template-columns: 1fr; gap: .35rem; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
-<body class="antialiased">
-  <header class="sticky top-0 z-50 border-b border-gold/25 bg-navy/95 backdrop-blur-md">
-    <div class="mx-auto flex h-16 w-[min(1120px,calc(100%-2rem))] items-center justify-between">
-      <a href="#top" class="text-xs font-semibold tracking-[0.18em] text-gold-2">SAI SIRI BANDARU</a>
-      <nav class="hidden items-center gap-6 md:flex">
-        <a class="text-[13px] tracking-wide text-hero-copy hover:text-gold-2" href="#work">Work</a>
-        <a class="text-[13px] tracking-wide text-hero-copy hover:text-gold-2" href="#skills">Skills</a>
-        <a class="text-[13px] tracking-wide text-hero-copy hover:text-gold-2" href="#experience">Experience</a>
-        <a class="text-[13px] tracking-wide text-hero-copy hover:text-gold-2" href="#education">Education</a>
-        <a class="text-[13px] tracking-wide text-hero-copy hover:text-gold-2" href="#contact">Contact</a>
-        <a class="text-[13px] tracking-wide text-gold-2 hover:text-cream" href="https://www.linkedin.com/in/bandarusaisiri" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="text-[13px] tracking-wide text-gold-2 hover:text-cream" href="https://github.com/saisiri-bandaru" target="_blank" rel="noopener noreferrer">GitHub</a>
+<body>
+  <div id="loader" aria-hidden="true">
+    <div>
+      <div class="n" id="loaderNum">0</div>
+      <div class="bar"><i id="loaderBar"></i></div>
+    </div>
+  </div>
+  <div class="noise"></div>
+  <div id="glow"></div>
+  <div class="wrap">
+    <header class="nav" id="nav">
+      <a class="brand" href="#top">SAI SIRI</a>
+      <nav class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <a class="text-sm text-gold-2 md:hidden" href="#contact">Contact</a>
-    </div>
-  </header>
+      <a class="btn btn-ghost" href="Sai_Siri_Bandaru_Analyst_Portfolio.pdf">Recruiter packet</a>
+    </header>
 
-  <main id="top">
-    <section class="relative overflow-hidden px-0 py-16 text-cream md:py-20">
-      <div class="hero-bg" aria-hidden="true">
-        <svg class="hero-svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="waveFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#c4a574" stop-opacity="0.10"/>
-              <stop offset="100%" stop-color="#c4a574" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <g class="drift">
-            <path class="hero-grid" d="M0 80 H1400 M0 160 H1400 M0 240 H1400 M0 320 H1400 M0 400 H1400 M0 480 H1400 M0 560 H1400"/>
-            <path class="hero-grid" d="M80 0 V640 M160 0 V640 M240 0 V640 M320 0 V640 M400 0 V640 M480 0 V640 M560 0 V640 M640 0 V640 M720 0 V640 M800 0 V640 M880 0 V640 M960 0 V640 M1040 0 V640 M1120 0 V640"/>
-            <path class="hero-wave-soft" d="M-80 360 C 40 300, 160 420, 280 360 S 520 300, 640 360 S 880 420, 1000 360 S 1240 300, 1360 360"/>
-            <path class="hero-wave" d="M-80 390 C 40 330, 160 450, 280 390 S 520 330, 640 390 S 880 450, 1000 390 S 1240 330, 1360 390"/>
-            <path fill="url(#waveFill)" d="M-80 390 C 40 330, 160 450, 280 390 S 520 330, 640 390 S 880 450, 1000 390 S 1240 330, 1360 390 L 1360 640 L -80 640 Z"/>
-          </g>
-          <g class="drift-slow">
-            <path class="hero-wave-soft" d="M-40 250 C 80 210, 200 290, 320 250 S 560 210, 680 250 S 920 290, 1040 250 S 1280 210, 1400 250"/>
-          </g>
-          <circle class="hero-mote float-a" cx="180" cy="140" r="2.2"/>
-          <circle class="hero-mote float-b" cx="520" cy="90" r="1.6"/>
-          <circle class="hero-mote float-c" cx="860" cy="170" r="2"/>
-          <circle class="hero-mote float-a" cx="1040" cy="420" r="1.8"/>
-          <circle class="hero-mote float-b" cx="300" cy="480" r="1.4"/>
-          <circle class="hero-mote float-c" cx="700" cy="520" r="2.1"/>
-        </svg>
-      </div>
-      <div class="hero-wash"></div>
-      <div class="relative z-10 mx-auto grid w-[min(1120px,calc(100%-2rem))] items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
+    <main id="top">
+      <section class="hero">
         <div>
-          <p class="mb-4 text-xs font-semibold tracking-[0.28em] text-gold uppercase">Financial Analyst at PNC · FP&A · Operations Finance</p>
-          <h1 class="font-display text-5xl leading-tight font-semibold md:text-6xl">Sai Siri Bandaru</h1>
-          <p class="mt-3 font-display text-2xl text-gold-2">Variance packs and forecasts that operators can run the week on.</p>
-          <p class="mt-5 max-w-lg text-lg text-hero-copy">MS Business Analytics and MBA Finance. I partner with operations to explain volume and cost movement, reforecast staffing, and put a defendable number on capital asks.</p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#work" class="inline-flex min-h-11 items-center bg-gold px-5 py-2 text-xs font-semibold tracking-[0.16em] text-navy uppercase hover:bg-gold-2">View selected work</a>
-            <a href="https://www.linkedin.com/in/bandarusaisiri" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center border border-gold/40 px-5 py-2 text-xs font-semibold tracking-[0.16em] text-gold-2 uppercase hover:text-cream">LinkedIn</a>
-            <a href="https://github.com/saisiri-bandaru" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-11 items-center border border-gold/40 px-5 py-2 text-xs font-semibold tracking-[0.16em] text-gold-2 uppercase hover:text-cream">GitHub</a>
+          <p class="eyebrow">Shaping numbers into decisions</p>
+          <h1><span>SAI</span><span>SIRI</span></h1>
+          <p class="role">Financial Analyst · FP&A · Operations Finance</p>
+          <p class="sub">Variance packs and forecasts that operators can run the week on. MS Business Analytics and MBA Finance. I partner with operations to explain volume and cost movement, reforecast staffing, and put a defendable number on capital asks.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#work">Explore work →</a>
+            <a class="btn btn-ghost" href="#contact">Let's talk →</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>4+ yrs</b><span>FP&A-style analysis across banking and operating businesses</span></div>
+            <div class="stat"><b>2%</b><span>Throughput lift supported at PNC through process and cost work</span></div>
+            <div class="stat"><b>MS + MBA</b><span>Business Analytics and Finance — dual quantitative stack</span></div>
+            <div class="stat"><b>Full stack</b><span>Excel · Power BI · Tableau · NetSuite · SAP / Oracle</span></div>
           </div>
         </div>
-        <img src="work/monogram.jpg" alt="Sai Siri Bandaru monogram" class="w-full border border-gold/35 shadow-[0_24px_60px_rgba(0,0,0,0.35)]" />
-      </div>
-    </section>
+      </section>
 
-    <div class="border-y border-gold/35 bg-navy-2 text-cream">
-      <div class="mx-auto grid w-[min(1120px,calc(100%-2rem))] gap-4 py-7 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="px-3 py-2"><b class="block font-display text-3xl text-gold-2">4+ yrs</b><span class="text-[13px] text-hero-copy">FP&A-style analysis across banking and operating businesses</span></div>
-        <div class="px-3 py-2"><b class="block font-display text-3xl text-gold-2">2%</b><span class="text-[13px] text-hero-copy">Throughput lift supported at PNC through process and cost work</span></div>
-        <div class="px-3 py-2"><b class="block font-display text-3xl text-gold-2">MS + MBA</b><span class="text-[13px] text-hero-copy">Business Analytics and Finance — dual quantitative stack</span></div>
-        <div class="px-3 py-2"><b class="block font-display text-3xl text-gold-2">Full stack</b><span class="text-[13px] text-hero-copy">Excel · Power BI · Tableau · NetSuite · SAP / Oracle</span></div>
-      </div>
-    </div>
-
-    <section id="about" class="scroll-mt-20 py-16 md:py-20">
-      <div class="mx-auto grid w-[min(1120px,calc(100%-2rem))] gap-10 md:grid-cols-2">
+      <section class="philosophy">
         <div>
-          <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase">Positioning</p>
-          <h2 class="mt-2 font-display text-4xl font-semibold text-navy">The analyst between operations and the P&L.</h2>
-          <div class="mt-4 h-0.5 w-14 bg-gold"></div>
+          <p class="sec-label">The philosophy</p>
+          <h2>THE PHILOSOPHY</h2>
+          <p>Most FP&A decks explain what happened. Finance leaders need someone who can also say why volume moved, what it means for staffing next quarter, and which lever to pull. I take messy operational data, put it in a controlled model, and hand executives a clean story with numbers they can defend.</p>
         </div>
-        <div class="space-y-4 text-body">
-          <p>Most FP&A decks explain what happened. Recruiters and finance leaders need someone who can also say why volume moved, what it means for staffing next quarter, and which lever to pull.</p>
-          <p>I currently support operations finance at PNC Financial Services. Before that I owned budget-variance packs and tuition/scholarship forecasts at upGrad, ran sales-side MIS and working-capital analysis at BYJU’S, and produced leadership EBITDA and leverage reporting at BSNL.</p>
-          <p>The through-line is the same: take messy operational data, put it in a controlled model, and hand executives a clean story with numbers they can defend.</p>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">Variance analysis</span>
-            <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">Forecasting & reforecasts</span>
-            <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">KPI design</span>
-            <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">DCF / NPV / IRR</span>
-            <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">Month-end reporting</span>
-            <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">Executive dashboards</span>
+      </section>
+
+      <section id="work">
+        <p class="sec-label">— Featured work</p>
+        <h2 class="sec-title">Selected models</h2>
+        <p class="sec-copy">Open a workbook. Yellow cells with blue font are inputs. Change a driver — the story on the output tab should move. All sample numbers are for fictional Northline Consumer Products.</p>
+        <div class="grid-work">
+          <a class="card" href="https://github.com/saisiri-bandaru/fpna-variance-dashboard">
+            <span class="tag">FP&A</span>
+            <h3>Variance dashboard</h3>
+            <p>Why did margin miss, and is it rate or volume? Actual vs Budget vs Forecast with a COGS split.</p>
+            <div class="meta"><span>Excel model</span><span>Open →</span></div>
+          </a>
+          <a class="card" href="https://github.com/saisiri-bandaru/cost-accounting-workbook">
+            <span class="tag">Ops finance</span>
+            <h3>Cost accounting</h3>
+            <p>Which plant variance sits with purchasing vs the floor? Material, labor, overhead, COGS bridge.</p>
+            <div class="meta"><span>Excel model</span><span>Open →</span></div>
+          </a>
+          <a class="card" href="https://github.com/saisiri-bandaru/thirteen-week-cash-forecast">
+            <span class="tag">Cash</span>
+            <h3>13-week cash</h3>
+            <p>Can we fund payroll and vendors if receipts slip one week? Receipts, disbursements, runway.</p>
+            <div class="meta"><span>Excel model</span><span>Open →</span></div>
+          </a>
+          <a class="card" href="https://github.com/saisiri-bandaru/dcf-valuation-model">
+            <span class="tag">Capital</span>
+            <h3>DCF valuation</h3>
+            <p>Unlevered FCF, WACC, terminal value, NPV and IRR on a capital ask.</p>
+            <div class="meta"><span>Excel model</span><span>Open →</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section id="experience">
+        <p class="sec-label">— Experience</p>
+        <h2 class="sec-title">Where I've been</h2>
+        <div class="timeline">
+          <article class="job">
+            <div class="when">Jun 2025 — Present</div>
+            <div>
+              <h3>Financial Analyst</h3>
+              <div class="co">PNC Financial Services</div>
+              <p>Operations finance partner: throughput and unit-cost improvement, executive KPIs, production-volume models, monthly variance commentary, quarterly staffing reforecasts, month-end template standardization.</p>
+            </div>
+          </article>
+          <article class="job">
+            <div class="when">Apr 2022 — Jul 2023</div>
+            <div>
+              <h3>Financial Analyst</h3>
+              <div class="co">upGrad</div>
+              <p>Budget-vs-actual packs, tuition / auxiliary / scholarship forecasts, NetSuite and Banner automation, Power BI and Tableau for operators, NPV/IRR on capital projects, grant compliance support.</p>
+            </div>
+          </article>
+          <article class="job">
+            <div class="when">Jan 2021 — Mar 2022</div>
+            <div>
+              <h3>Sales Analyst</h3>
+              <div class="co">BYJU'S</div>
+              <p>Department budgets, standard-cost variance, AP/AR and working capital, ROI and payback, dynamic pricing, monthly MIS on margin and capacity.</p>
+            </div>
+          </article>
+          <article class="job">
+            <div class="when">Jan 2019 — Aug 2019</div>
+            <div>
+              <h3>Junior Financial Analyst</h3>
+              <div class="co">BSNL</div>
+              <p>Overhead and labor variance, daily cash for procurement and CAPEX, EBITDA and leverage MIS, SAP / Oracle extraction.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <p class="sec-label">— Education</p>
+        <h2 class="sec-title">Credentials behind the models</h2>
+        <div class="edu">
+          <article>
+            <div class="school">University of New Haven</div>
+            <h3>M.S. Business Analytics</h3>
+            <p class="school">August 2023 — May 2025</p>
+          </article>
+          <article>
+            <div class="school">JNTU Kakinada</div>
+            <h3>MBA, Accounting & Finance</h3>
+            <p class="school">July 2018 — December 2020</p>
+          </article>
+          <article>
+            <div class="school">Acharya Nagarjuna University</div>
+            <h3>Bachelor's, Accounting & Finance</h3>
+            <p class="school">August 2015 — May 2018</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <p class="sec-label">— Get in touch</p>
+        <h2 class="sec-title">Let's put a number on the next role</h2>
+        <p class="sec-copy">Open to FP&A, operations finance, and analytics-heavy finance roles.</p>
+        <div class="contact">
+          <div class="panel">
+            <dl>
+              <dt>Email</dt>
+              <dd><a href="mailto:saisiri.bandaru12@gmail.com">saisiri.bandaru12@gmail.com</a></dd>
+              <dt>Phone</dt>
+              <dd><a href="tel:+12035339355">203.533.9355</a></dd>
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/bandarusaisiri" target="_blank" rel="noopener">linkedin.com/in/bandarusaisiri</a></dd>
+              <dt>GitHub</dt>
+              <dd><a href="https://github.com/saisiri-bandaru" target="_blank" rel="noopener">github.com/saisiri-bandaru</a></dd>
+            </dl>
+          </div>
+          <div class="panel">
+            <p class="sec-copy" style="margin:0 0 1.25rem">Prefer the short pack? Download the recruiter PDF, then open one Northline workbook from Featured work.</p>
+            <a class="btn btn-primary" href="Sai_Siri_Bandaru_Analyst_Portfolio.pdf">Download recruiter packet →</a>
+            <div style="height: .85rem"></div>
+            <a class="btn btn-ghost" href="https://github.com/saisiri-bandaru">See GitHub models →</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="work" class="scroll-mt-20 bg-white py-16 md:py-20">
-      <div class="mx-auto w-[min(1120px,calc(100%-2rem))]">
-        <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase">Selected work</p>
-        <h2 class="mt-2 font-display text-4xl font-semibold text-navy">Four problems I am hired to solve.</h2>
-        <div class="mt-4 mb-4 h-0.5 w-14 bg-gold"></div>
-        <p class="mb-8 max-w-xl text-body">Open a case, then toggle between the reconstructed pack and a live model of the same story. Outcomes stay limited to my professional record.</p>
-        <div id="case-tabs" class="flex gap-2 overflow-x-auto pb-2"></div>
-        <article class="mt-6 grid gap-8 border border-line bg-paper p-5 md:grid-cols-[1.05fr_0.95fr] md:p-8">
-          <div>
-            <div class="mb-4 flex flex-wrap gap-2">
-              <button id="btn-pack" type="button" class="min-h-11 bg-gold px-4 py-2 text-xs font-semibold tracking-[0.16em] text-navy uppercase">Pack</button>
-              <button id="btn-model" type="button" class="min-h-11 border border-line px-4 py-2 text-xs font-semibold tracking-[0.16em] text-navy uppercase">Live model</button>
-            </div>
-            <img id="pack-img" class="h-56 w-full border border-line object-cover object-top md:h-72" alt="" />
-            <div id="model-view" class="hidden rounded-lg border border-line bg-cream p-4">
-              <p id="chart-title" class="mb-3 text-xs font-semibold tracking-[0.16em] text-gold uppercase"></p>
-              <svg id="chart" viewBox="0 0 560 220" class="h-56 w-full" role="img"></svg>
-              <p class="mt-2 text-xs text-soft italic">Illustrative reconstruction — not confidential employer figures.</p>
-            </div>
-          </div>
-          <div>
-            <p id="case-tag" class="text-[11px] font-bold tracking-[0.16em] text-gold uppercase"></p>
-            <h3 id="case-title" class="mt-2 font-display text-2xl font-semibold text-navy md:text-[28px]"></h3>
-            <p id="case-meta" class="mt-1 mb-4 text-sm text-muted"></p>
-            <div class="grid gap-4 sm:grid-cols-3">
-              <div><h4 class="text-xs font-semibold tracking-[0.12em] text-navy uppercase">Problem</h4><p id="case-problem" class="mt-1 text-sm text-body"></p></div>
-              <div><h4 class="text-xs font-semibold tracking-[0.12em] text-navy uppercase">Approach</h4><p id="case-approach" class="mt-1 text-sm text-body"></p></div>
-              <div><h4 class="text-xs font-semibold tracking-[0.12em] text-navy uppercase">Result</h4><p id="case-result" class="mt-1 text-sm text-body"></p></div>
-            </div>
-            <p id="case-tools" class="mt-4 text-xs text-soft italic"></p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="scroll-mt-20 py-16 md:py-20">
-      <div class="mx-auto w-[min(1120px,calc(100%-2rem))]">
-        <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase">Toolkit</p>
-        <h2 class="mt-2 font-display text-4xl font-semibold text-navy">How I actually work.</h2>
-        <div class="mt-4 mb-8 h-0.5 w-14 bg-gold"></div>
-        <div class="grid gap-4 md:grid-cols-3">
-          <article class="border border-line bg-white p-6">
-            <h3 class="font-display text-xl text-navy">FP&A core</h3>
-            <ul class="mt-3 list-disc space-y-1.5 pl-4 text-sm text-body">
-              <li>Budget vs. actual and prior-period variance</li>
-              <li>Driver-based forecasting and quarterly reforecasts</li>
-              <li>KPI design and target tracking</li>
-              <li>Month-end close packs and reporting controls</li>
-              <li>Staffing and resource modeling</li>
-            </ul>
-          </article>
-          <article class="border border-line bg-white p-6">
-            <h3 class="font-display text-xl text-navy">Valuation & commercial</h3>
-            <ul class="mt-3 list-disc space-y-1.5 pl-4 text-sm text-body">
-              <li>DCF, NPV, IRR</li>
-              <li>ROI and payback</li>
-              <li>Scholarship / discount and pricing models</li>
-              <li>Working capital (AP/AR) diagnostics</li>
-              <li>Margin and capacity MIS</li>
-            </ul>
-          </article>
-          <article class="border border-line bg-white p-6">
-            <h3 class="font-display text-xl text-navy">Systems & visualization</h3>
-            <ul class="mt-3 list-disc space-y-1.5 pl-4 text-sm text-body">
-              <li>Advanced Excel (lookups, nested formulas, pivots)</li>
-              <li>Power BI and Tableau</li>
-              <li>Oracle NetSuite, Banner, SAP, Oracle ERP</li>
-              <li>Executive dashboarding for non-finance users</li>
-              <li>Reporting automation and template standardization</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="scroll-mt-20 bg-white py-16 md:py-20">
-      <div class="mx-auto w-[min(1120px,calc(100%-2rem))]">
-        <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase">Experience</p>
-        <h2 class="mt-2 font-display text-4xl font-semibold text-navy">Where the work was done.</h2>
-        <div class="mt-4 mb-8 h-0.5 w-14 bg-gold"></div>
-        <div class="grid gap-5">
-          <article class="border-l-[3px] border-gold bg-paper px-5 py-5">
-            <p class="text-xs tracking-wide text-muted uppercase">Jun 2025 — Present</p>
-            <h3 class="mt-1 font-display text-2xl text-navy">Financial Analyst · PNC Financial Services</h3>
-            <p class="mt-2 text-body">Operations finance partner: throughput and unit-cost improvement, executive KPIs, production-volume models, monthly variance commentary, quarterly staffing reforecasts, month-end template standardization.</p>
-          </article>
-          <article class="border-l-[3px] border-gold bg-paper px-5 py-5">
-            <p class="text-xs tracking-wide text-muted uppercase">Apr 2022 — Jul 2023</p>
-            <h3 class="mt-1 font-display text-2xl text-navy">Financial Analyst · upGrad</h3>
-            <p class="mt-2 text-body">Budget-vs-actual packs, tuition / auxiliary / scholarship forecasts, NetSuite and Banner automation, Power BI and Tableau for operators, NPV/IRR on capital projects, grant compliance support.</p>
-          </article>
-          <article class="border-l-[3px] border-gold bg-paper px-5 py-5">
-            <p class="text-xs tracking-wide text-muted uppercase">Jan 2021 — Mar 2022</p>
-            <h3 class="mt-1 font-display text-2xl text-navy">Sales Analyst · BYJU’S</h3>
-            <p class="mt-2 text-body">Department budgets, standard-cost variance, AP/AR and working capital, ROI and payback, dynamic pricing, monthly MIS on margin and capacity.</p>
-          </article>
-          <article class="border-l-[3px] border-gold bg-paper px-5 py-5">
-            <p class="text-xs tracking-wide text-muted uppercase">Jan 2019 — Aug 2019</p>
-            <h3 class="mt-1 font-display text-2xl text-navy">Junior Financial Analyst · BSNL</h3>
-            <p class="mt-2 text-body">Overhead and labor variance, daily cash for procurement and CAPEX, EBITDA and leverage MIS, SAP / Oracle extraction.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="scroll-mt-20 py-16 md:py-20">
-      <div class="mx-auto w-[min(1120px,calc(100%-2rem))]">
-        <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase">Education & honors</p>
-        <h2 class="mt-2 font-display text-4xl font-semibold text-navy">Credentials behind the models.</h2>
-        <div class="mt-4 mb-8 h-0.5 w-14 bg-gold"></div>
-        <div class="grid gap-4 md:grid-cols-3">
-          <article class="min-h-44 bg-navy p-6 text-cream">
-            <strong class="block text-[13px] tracking-wide text-gold-2 uppercase">University of New Haven</strong>
-            <h3 class="mt-2 font-display text-xl">M.S. Business Analytics</h3>
-            <p class="mt-2 text-sm text-hero-copy">August 2023 — May 2025</p>
-          </article>
-          <article class="min-h-44 bg-navy p-6 text-cream">
-            <strong class="block text-[13px] tracking-wide text-gold-2 uppercase">JNTU Kakinada</strong>
-            <h3 class="mt-2 font-display text-xl">MBA, Accounting & Finance</h3>
-            <p class="mt-2 text-sm text-hero-copy">July 2018 — December 2020</p>
-          </article>
-          <article class="min-h-44 bg-navy p-6 text-cream">
-            <strong class="block text-[13px] tracking-wide text-gold-2 uppercase">Acharya Nagarjuna University</strong>
-            <h3 class="mt-2 font-display text-xl">Bachelor's, Accounting & Finance</h3>
-            <p class="mt-2 text-sm text-hero-copy">August 2015 — May 2018</p>
-          </article>
-        </div>
-        <div class="mt-5 flex flex-wrap gap-2">
-          <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">Inducted Member — Beta Gamma Sigma</span>
-          <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">Merit Scholarship — Academic Excellence Award</span>
-          <span class="border border-gold/35 bg-white px-2.5 py-1.5 text-xs text-navy">Languages: English · Telugu · Hindi</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="contact" class="scroll-mt-20 bg-navy py-16 text-cream md:py-20">
-    <div class="mx-auto grid w-[min(1120px,calc(100%-2rem))] gap-10 md:grid-cols-[1.2fr_0.8fr]">
-      <div>
-        <p class="text-xs font-bold tracking-[0.22em] text-gold uppercase">Contact</p>
-        <h2 class="mt-2 font-display text-4xl font-semibold">Let’s put a number on the next role.</h2>
-        <div class="mt-4 mb-6 h-0.5 w-14 bg-gold"></div>
-        <p class="max-w-lg text-hero-copy">Open to FP&A, operations finance, and analytics-heavy finance roles.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="Sai_Siri_Bandaru_Analyst_Portfolio.pdf" download class="inline-flex min-h-11 items-center bg-gold px-5 py-2 text-xs font-semibold tracking-[0.16em] text-navy uppercase hover:bg-gold-2">Download work packet</a>
-          <a href="Sai_Siri_Bandaru_Analyst_Portfolio.pdf" target="_blank" rel="noopener" class="inline-flex min-h-11 items-center border border-gold/40 px-5 py-2 text-xs font-semibold tracking-[0.16em] text-gold-2 uppercase">Open packet</a>
-        </div>
-      </div>
-      <div class="space-y-3 text-gold-2">
-        <a class="flex min-h-11 items-center hover:text-cream" href="mailto:saisiri.bandaru12@gmail.com">saisiri.bandaru12@gmail.com</a>
-        <a class="flex min-h-11 items-center hover:text-cream" href="tel:+12035339355">203.533.9355</a>
-        <a class="flex min-h-11 items-center hover:text-cream" href="https://www.linkedin.com/in/bandarusaisiri" target="_blank" rel="noopener noreferrer">linkedin.com/in/bandarusaisiri</a>
-        <a class="flex min-h-11 items-center hover:text-cream" href="https://github.com/saisiri-bandaru" target="_blank" rel="noopener noreferrer">github.com/saisiri-bandaru</a>
-      </div>
-    </div>
-    <p class="mx-auto mt-10 w-[min(1120px,calc(100%-2rem))] text-xs text-soft">© 2026 Sai Siri Bandaru · Available for FP&A and operations finance roles.</p>
-  </footer>
-
+      </section>
+    </main>
+    <footer>© 2026 Sai Siri Bandaru. Built for recruiters who read the model.</footer>
+  </div>
   <script>
-    const CASES = [
-      {
-        id: "ops", kicker: "01 PNC", label: "Throughput",
-        tag: "PNC · Operations Finance",
-        title: "Make production visible enough to move unit cost.",
-        meta: "Jun 2025 – Present · partnership with operations leadership",
-        problem: "Leadership needed a single view of volume vs. budget, bottlenecks, and the staffing implication before the quarter slipped.",
-        approach: "Advanced Excel models (lookups, nested logic, pivots), monthly actual-vs-budget and prior-period variance with written commentary, and executive KPI dashboards vs. quarterly targets.",
-        result: "Partnered on workflow fixes that contributed to a 2% throughput increase and lower unit processing cost. Standardized month-end templates to tighten close and data integrity.",
-        tools: "Excel · operational datasets · executive dashboards · quarterly reforecasts",
-        image: "work/dash-ops.jpg",
-        chartTitle: "Monthly volume vs. budget",
-        series: [
-          { m: "Dec", a: 1032, b: 1050 }, { m: "Jan", a: 1085, b: 1100 }, { m: "Feb", a: 1112, b: 1150 },
-          { m: "Mar", a: 1198, b: 1200 }, { m: "Apr", a: 1210, b: 1220 }, { m: "May", a: 1245, b: 1266 },
-          { m: "Jun", a: 1275, b: 1300 }, { m: "Jul", a: 1302, b: 1320 }, { m: "Aug", a: 1280, b: 1290 },
-          { m: "Sep", a: 1260, b: 1270 }, { m: "Oct", a: 1240, b: 1270 }, { m: "Nov", a: 1255, b: 1275 },
-        ],
-        keys: ["a", "b"], labels: ["actual", "budget"],
-      },
-      {
-        id: "revenue", kicker: "02 upGrad", label: "Forecast",
-        tag: "upGrad · Financial Analyst",
-        title: "Forecast tuition, discounts, and the story behind the miss.",
-        meta: "Apr 2022 – Jul 2023 · Hyderabad",
-        problem: "Campus divisions needed budget-vs-actual packs and a forward view of tuition, auxiliary income, and scholarship discounting — not just a static budget file.",
-        approach: "Built forecasting models, automated reporting in Oracle NetSuite and Banner, and designed Power BI / Tableau dashboards for non-finance stakeholders. Supported grant compliance documentation.",
-        result: "Faster, more accessible reporting and investment cases leadership could use. Variance packs named the spending drivers instead of dumping a spreadsheet.",
-        tools: "NetSuite · Banner ERP · Power BI · Tableau · Excel forecast models",
-        image: "work/dash-revenue.jpg",
-        chartTitle: "Tuition actual vs. forecast ($000s, illustrative)",
-        series: [
-          { m: "Jul", a: 26.2, b: 26.0 }, { m: "Aug", a: 36.8, b: 37.4 }, { m: "Sep", a: 55.1, b: 54.0 },
-          { m: "Oct", a: 73.0, b: 71.2 }, { m: "Nov", a: 85.3, b: 84.8 }, { m: "Jun", a: 96.5, b: 98.1 },
-        ],
-        keys: ["a", "b"], labels: ["actual", "forecast"],
-      },
-      {
-        id: "capital", kicker: "03 Capital", label: "NPV / IRR",
-        tag: "upGrad + BYJU’S · Capital decisions",
-        title: "Put a number on \u201cshould we fund this?\u201d",
-        meta: "Capital projects, pricing, and payback analysis",
-        problem: "Project sponsors speak in features. Finance has to speak in NPV, IRR, ROI, and payback — with assumptions a committee can challenge.",
-        approach: "Ran NPV and IRR on capital projects at upGrad. At BYJU’S, built ROI and payback analysis plus dynamic pricing models alongside departmental budgets.",
-        result: "Investment conversations moved from opinion to a ranked set of options with explicit return and risk timing.",
-        tools: "DCF · NPV · IRR vs. hurdle · payback · volume and discount-rate sensitivity",
-        image: "work/dash-npv.jpg",
-        chartTitle: "NPV by project ($000s, anonymized)",
-        bars: [{ n: "Project A", v: 1230 }, { n: "Project B", v: 750 }, { n: "Project C", v: 420 }],
-      },
-      {
-        id: "liquidity", kicker: "04 Liquidity", label: "Working capital",
-        tag: "BYJU’S · Sales Analyst  |  BSNL · Junior Financial Analyst",
-        title: "Working capital, margin, and the daily cash position.",
-        meta: "2021–2022 and 2019",
-        problem: "Commercial teams needed monthly MIS on margin and capacity, while treasury needed a daily cash view for procurement and CAPEX.",
-        approach: "Department budgets, actual-vs-standard cost variance, AP/AR cycle review, daily cash monitoring, and leadership MIS on EBITDA margins and debt-to-equity from SAP and Oracle.",
-        result: "Operators got a margin-and-capacity pack they could use; leadership got liquidity and leverage in the same reporting cadence.",
-        tools: "SAP · Oracle · working capital diagnostics · monthly MIS",
-        image: "work/dash-ops.jpg",
-        chartTitle: "Gross margin % and capacity utilization",
-        series: [
-          { m: "Jan", a: 38.2, b: 72 }, { m: "Feb", a: 39.1, b: 74 }, { m: "Mar", a: 37.4, b: 81 },
-          { m: "Apr", a: 40.6, b: 86 }, { m: "May", a: 41.2, b: 88 }, { m: "Jun", a: 40.0, b: 84 },
-        ],
-        keys: ["a", "b"], labels: ["margin", "capacity"],
-      },
-    ];
+    (function () {
+      const loader = document.getElementById('loader');
+      const num = document.getElementById('loaderNum');
+      const bar = document.getElementById('loaderBar');
+      let n = 0;
+      const tick = () => {
+        n += Math.max(1, Math.round((100 - n) / 8));
+        if (n > 100) n = 100;
+        num.textContent = String(n);
+        bar.style.width = n + '%';
+        if (n < 100) requestAnimationFrame(tick);
+        else setTimeout(() => loader.classList.add('done'), 180);
+      };
+      requestAnimationFrame(tick);
 
-    let active = CASES[0];
-    let view = "pack";
+      const glow = document.getElementById('glow');
+      window.addEventListener('pointermove', (e) => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+      }, { passive: true });
 
-    function polyline(values, min, max) {
-      return values.map((v, i) => {
-        const x = 40 + (i * 480) / (values.length - 1);
-        const y = 190 - ((v - min) / (max - min)) * 150;
-        return x + "," + y;
-      }).join(" ");
-    }
-
-    function drawChart(c) {
-      const svg = document.getElementById("chart");
-      document.getElementById("chart-title").textContent = c.chartTitle;
-      if (c.bars) {
-        const max = Math.max(...c.bars.map((b) => b.v));
-        svg.innerHTML = c.bars.map((b, i) => {
-          const y = 30 + i * 55;
-          const w = (b.v / max) * 380;
-          return `<text x="8" y="${y + 18}" fill="#5c6673" font-size="12">${b.n}</text>
-            <rect x="100" y="${y}" width="${w}" height="28" fill="#0b1f3a"></rect>
-            <text x="${108 + w}" y="${y + 19}" fill="#0b1f3a" font-size="12">${b.v}</text>`;
-        }).join("");
-        return;
-      }
-      const vals = c.series.flatMap((s) => [s.a, s.b]);
-      const min = Math.min(...vals) * 0.96;
-      const max = Math.max(...vals) * 1.02;
-      const a = polyline(c.series.map((s) => s.a), min, max);
-      const b = polyline(c.series.map((s) => s.b), min, max);
-      const ticks = c.series.map((s, i) => {
-        const x = 40 + (i * 480) / (c.series.length - 1);
-        return `<text x="${x}" y="210" text-anchor="middle" fill="#5c6673" font-size="11">${s.m}</text>`;
-      }).join("");
-      svg.innerHTML = `
-        <polyline fill="none" stroke="#0b1f3a" stroke-width="2" points="${a}"></polyline>
-        <polyline fill="none" stroke="#c4a574" stroke-width="2" points="${b}"></polyline>
-        ${ticks}
-        <text x="40" y="16" fill="#0b1f3a" font-size="11">${c.labels[0]}</text>
-        <text x="110" y="16" fill="#c4a574" font-size="11">${c.labels[1]}</text>`;
-    }
-
-    function render() {
-      document.getElementById("case-tag").textContent = active.tag;
-      document.getElementById("case-title").textContent = active.title;
-      document.getElementById("case-meta").textContent = active.meta;
-      document.getElementById("case-problem").textContent = active.problem;
-      document.getElementById("case-approach").textContent = active.approach;
-      document.getElementById("case-result").textContent = active.result;
-      document.getElementById("case-tools").textContent = active.tools;
-      const img = document.getElementById("pack-img");
-      img.src = active.image;
-      img.alt = active.title;
-      const pack = view === "pack";
-      img.classList.toggle("hidden", !pack);
-      document.getElementById("model-view").classList.toggle("hidden", pack);
-      document.getElementById("btn-pack").className = pack
-        ? "min-h-11 bg-gold px-4 py-2 text-xs font-semibold tracking-[0.16em] text-navy uppercase"
-        : "min-h-11 border border-line px-4 py-2 text-xs font-semibold tracking-[0.16em] text-navy uppercase";
-      document.getElementById("btn-model").className = !pack
-        ? "min-h-11 bg-gold px-4 py-2 text-xs font-semibold tracking-[0.16em] text-navy uppercase"
-        : "min-h-11 border border-line px-4 py-2 text-xs font-semibold tracking-[0.16em] text-navy uppercase";
-      if (!pack) drawChart(active);
-      document.querySelectorAll("[data-case]").forEach((el) => {
-        el.className = "min-h-11 shrink-0 border px-4 py-2 text-left text-sm " +
-          (el.dataset.case === active.id ? "tab-on" : "tab-off");
-      });
-    }
-
-    const tabs = document.getElementById("case-tabs");
-    CASES.forEach((c) => {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.dataset.case = c.id;
-      btn.innerHTML = `<span class="block text-[10px] tracking-[0.14em] uppercase opacity-80">${c.kicker}</span><span class="font-medium">${c.label}</span>`;
-      btn.addEventListener("click", () => { active = c; view = "pack"; render(); });
-      tabs.appendChild(btn);
-    });
-    document.getElementById("btn-pack").addEventListener("click", () => { view = "pack"; render(); });
-    document.getElementById("btn-model").addEventListener("click", () => { view = "model"; render(); });
-    render();
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 12);
+      }, { passive: true });
+    })();
   </script>
 </body>
 </html>
