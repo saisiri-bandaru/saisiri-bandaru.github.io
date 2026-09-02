@@ -28,5 +28,6 @@ Sample files use a fictional company (**Northline Consumer Products**). No emplo
 ## Contact
 
 - Email: [bandarusaisiri1207@gmail.com](mailto:bandarusaisiri1207@gmail.com)
-- LinkedIn: [linkedin.com/in/sai-siri-bandaru](https://www.linkedin.com/in/sai-siri-bandaru)
+- Phone: [203.533.9355](tel:+12035339355)
+- LinkedIn: [linkedin.com/in/bandarusaisiri](https://www.linkedin.com/in/bandarusaisiri)
 - Portfolio: [saisiri-bandaru.github.io](https://saisiri-bandaru.github.io)
