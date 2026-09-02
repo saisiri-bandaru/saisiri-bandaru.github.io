@@ -50,6 +50,30 @@
     button { cursor: pointer; }
     .tab-on { background: #0b1f3a; color: #f6f1e8; border-color: #0b1f3a; }
     .tab-off { background: #fbf8f3; color: #0b1f3a; border-color: #eadfcd; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; background: #0b1f3a; }
+    .hero-svg { width: 100%; height: 100%; display: block; }
+    .hero-wash { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(90deg, rgba(11,31,58,.92) 0%, rgba(11,31,58,.78) 52%, rgba(11,31,58,.55) 100%); }
+    .hero-grid { stroke: #c4a574; stroke-opacity: .07; stroke-width: 1; }
+    .hero-wave { fill: none; stroke: #c4a574; stroke-width: 1.7; stroke-linecap: round; opacity: .5; }
+    .hero-wave-soft { fill: none; stroke: #e8d5b0; stroke-width: 1.1; opacity: .2; }
+    .hero-mote { fill: #c4a574; }
+    .drift { animation: drift 14s ease-in-out infinite; }
+    .drift-slow { animation: drift 22s ease-in-out infinite reverse; }
+    .float-a { animation: floaty 9s ease-in-out infinite; }
+    .float-b { animation: floaty 13s ease-in-out infinite .8s; }
+    .float-c { animation: floaty 17s ease-in-out infinite 1.6s; }
+    @keyframes drift {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(-48px); }
+    }
+    @keyframes floaty {
+      0%, 100% { transform: translate(0, 0); opacity: .18; }
+      50% { transform: translate(18px, -14px); opacity: .42; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .drift, .drift-slow, .float-a, .float-b, .float-c { animation: none; }
+    }
   </style>
 </head>
 <body class="antialiased">
@@ -70,8 +94,35 @@
   </header>
 
   <main id="top">
-    <section class="bg-navy px-0 py-16 text-cream md:py-20">
-      <div class="mx-auto grid w-[min(1120px,calc(100%-2rem))] items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
+    <section class="relative overflow-hidden px-0 py-16 text-cream md:py-20">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="waveFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#c4a574" stop-opacity="0.10"/>
+              <stop offset="100%" stop-color="#c4a574" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g class="drift">
+            <path class="hero-grid" d="M0 80 H1400 M0 160 H1400 M0 240 H1400 M0 320 H1400 M0 400 H1400 M0 480 H1400 M0 560 H1400"/>
+            <path class="hero-grid" d="M80 0 V640 M160 0 V640 M240 0 V640 M320 0 V640 M400 0 V640 M480 0 V640 M560 0 V640 M640 0 V640 M720 0 V640 M800 0 V640 M880 0 V640 M960 0 V640 M1040 0 V640 M1120 0 V640"/>
+            <path class="hero-wave-soft" d="M-80 360 C 40 300, 160 420, 280 360 S 520 300, 640 360 S 880 420, 1000 360 S 1240 300, 1360 360"/>
+            <path class="hero-wave" d="M-80 390 C 40 330, 160 450, 280 390 S 520 330, 640 390 S 880 450, 1000 390 S 1240 330, 1360 390"/>
+            <path fill="url(#waveFill)" d="M-80 390 C 40 330, 160 450, 280 390 S 520 330, 640 390 S 880 450, 1000 390 S 1240 330, 1360 390 L 1360 640 L -80 640 Z"/>
+          </g>
+          <g class="drift-slow">
+            <path class="hero-wave-soft" d="M-40 250 C 80 210, 200 290, 320 250 S 560 210, 680 250 S 920 290, 1040 250 S 1280 210, 1400 250"/>
+          </g>
+          <circle class="hero-mote float-a" cx="180" cy="140" r="2.2"/>
+          <circle class="hero-mote float-b" cx="520" cy="90" r="1.6"/>
+          <circle class="hero-mote float-c" cx="860" cy="170" r="2"/>
+          <circle class="hero-mote float-a" cx="1040" cy="420" r="1.8"/>
+          <circle class="hero-mote float-b" cx="300" cy="480" r="1.4"/>
+          <circle class="hero-mote float-c" cx="700" cy="520" r="2.1"/>
+        </svg>
+      </div>
+      <div class="hero-wash"></div>
+      <div class="relative z-10 mx-auto grid w-[min(1120px,calc(100%-2rem))] items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
         <div>
           <p class="mb-4 text-xs font-semibold tracking-[0.28em] text-gold uppercase">Financial Analyst at PNC · FP&A · Operations Finance</p>
           <h1 class="font-display text-5xl leading-tight font-semibold md:text-6xl">Sai Siri Bandaru</h1>
@@ -318,7 +369,7 @@
       {
         id: "capital", kicker: "03 Capital", label: "NPV / IRR",
         tag: "upGrad + BYJU’S · Capital decisions",
-        title: "Put a number on “should we fund this?”",
+        title: "Put a number on \u201cshould we fund this?\u201d",
         meta: "Capital projects, pricing, and payback analysis",
         problem: "Project sponsors speak in features. Finance has to speak in NPV, IRR, ROI, and payback — with assumptions a committee can challenge.",
         approach: "Ran NPV and IRR on capital projects at upGrad. At BYJU’S, built ROI and payback analysis plus dynamic pricing models alongside departmental budgets.",
